@@ -5,37 +5,6 @@
         </h2>
     </x-slot>
 
-    <!-- <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                   <form action="{{ route('posts.store') }}" method="POST" novalidate>
-                    @csrf
-                    <div>
-                        <label for="name_post">Name: </label>
-                        <input type="text" name="name_post" id="name_post" />
-                    </div>
-                    <div>
-                        <label for="category_post">Category: </label>
-                        
-                        <select name="category_post" id="category_post">
-                            <option>Carrera 1</option>
-                            <option>Carrera 2</option>
-                        </select>
-                    </div>
-                    <textarea name="message"
-                        class="block w-full rounded-md border-gray-300 bg-white shadow-sm transition-colors duration-300 focus:border-indigo-300 focus-ring focus-ring-indigo-200 focus:ring-opacity-50 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:focus:border-indigo-300 dark:focus:ring dark:focus:ring-indigo-200 dark:focus:ring-opacity-50"
-                        placeholder="{{__('What\'s on your mind?')}}"
-                    ></textarea>
-                    <x-primary-button class="mt-4">
-                        {{__('Create post')}}
-                    </x-primary-button>
-                   </form>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
     <div class="py-6">
         <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
@@ -65,7 +34,7 @@
                                 <legend>{{__('Choose your tags')}}:</legend>
                                 @foreach ($tags as $tag)
                                 <div>
-                                    <input type="checkbox" id="{{$tag->id}}" name="{{$tag->name}}" />
+                                    <input type="checkbox" id="{{$tag->id}}" name="tags[{{$tag->id}}]" />
                                     <label for="{{$tag->name}}">{{$tag->name}}</label>
                                 </div>
                                 @endforeach
