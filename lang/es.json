@@ -47,7 +47,7 @@
     "Create :name": "Crear :name",
     "Created": "Creado",
     "Current Password": "Contraseña actual",
-    "Dashboard": "Panel",
+    "Dashboard": "Posts",
     "Delete": "Eliminar",
     "Delete :name": "Eliminar :name",
     "Delete Account": "Borrar cuenta",
@@ -253,5 +253,9 @@
     "Yes": "Sí",
     "You are receiving this email because we received a password reset request for your account.": "Ha recibido este mensaje porque se solicitó un restablecimiento de contraseña para su cuenta.",
     "You're logged in!": "¡Usted está conectado!",
-    "Your email address is unverified.": "Su dirección de correo electrónico no está verificada."
+    "Your email address is unverified.": "Su dirección de correo electrónico no está verificada.",
+    "Choose your tags": "Seleccione sus tags",
+    "Create Post": "Crear post",
+    "Category": "Categoría",
+    "Message": "Mensaje"
 }

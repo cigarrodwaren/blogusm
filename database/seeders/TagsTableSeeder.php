@@ -4,7 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 use App\Models\Tag;
+
 
 class TagsTableSeeder extends Seeder
 {
@@ -13,6 +15,18 @@ class TagsTableSeeder extends Seeder
      */
     public function run(): void
     {
-        Tag::factory()->count(10)->create();
+        Tag::create([
+            "name"=> "Clases Online",
+           "slug"=> Str::slug("Clases Online"),
+        ]);
+        Tag::create([
+            "name"=> "Laboratorios",
+            "slug"=> Str::slug("Laboratorios"),
+        ]);
+        Tag::create([
+            "name"=> "Catedra",
+            "slug"=> Str::slug("Catedra"),
+        ]);
+        //Tag::factory()->count(10)->create();
     }
 }

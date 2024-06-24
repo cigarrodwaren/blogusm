@@ -5,9 +5,15 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PostController::class,'index'])->name('posts.index');
+Route::get('/posts/{post}', [PostController::class,'show'])->name('posts.show');
+Route::get('/posts', [PostController::class,'create'])->name('posts.create');
+Route::post('/posts', [PostController::class,'store'])->name('posts.store');
+
+
+
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect('/');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
