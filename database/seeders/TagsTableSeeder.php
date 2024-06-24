@@ -16,8 +16,8 @@ class TagsTableSeeder extends Seeder
     public function run(): void
     {
         Tag::create([
-            "name"=> "Clases Online",
-           "slug"=> Str::slug("Clases Online"),
+            "name"=> "Comunidad",
+            "slug"=> Str::slug("Comunidad"),
         ]);
         Tag::create([
             "name"=> "Laboratorios",

@@ -1,6 +1,6 @@
 <x-app-layout>
-    <div class="container py-8">
-       <div class="grid grid-cols-2 gap-6">
+    <div class="container mx-auto py-8 mt-8 bg-white shadow-lg rounded-lg ">
+       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-6">
        @foreach ($posts as $post) 
         <div class="max-w-sm rounded overflow-hidden shadow-lg">
         <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">

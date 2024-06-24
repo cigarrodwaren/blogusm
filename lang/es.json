@@ -254,8 +254,14 @@
     "You are receiving this email because we received a password reset request for your account.": "Ha recibido este mensaje porque se solicitó un restablecimiento de contraseña para su cuenta.",
     "You're logged in!": "¡Usted está conectado!",
     "Your email address is unverified.": "Su dirección de correo electrónico no está verificada.",
-    "Choose your tags": "Seleccione sus tags",
+    "Choose your tags": "Seleccione sus etiquetas",
     "Create Post": "Crear post",
     "Category": "Categoría",
-    "Message": "Mensaje"
+    "Message": "Mensaje",
+    "New Posts": "Nuevo post",
+    "Create a New Post": "Crear un nuevo post",
+    "What's on your mind ...?": "¿Qué tienes en mente?",
+    "Enter title for the post...": "Ingrese título para el post",
+    "Select category": "Seleccione categoría",
+    "New Post Form": "Formulario nuevo post"
 }
