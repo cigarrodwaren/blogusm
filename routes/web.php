@@ -14,9 +14,10 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     
     Route::get('posts', [PostController::class,'index'])->name('posts');
+    Route::get('posts/{user}', [PostController::class,'list'])->name('list');
 
     Route::get('posts/create', [PostController::class,'create'])->name('create');
-    Route::post('posts/create', [PostController::class,'store'])->name('store');
+    Route::post('posts/store', [PostController::class,'store'])->name('store');
     Route::get('posts/{post}', [PostController::class,'show'])->name('show');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
