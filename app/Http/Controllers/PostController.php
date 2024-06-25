@@ -49,7 +49,7 @@ class PostController extends Controller
         }
        
         //session()->flash('status', 'Post created successfully!');
-        return to_route('posts.index')
+        return to_route('posts')
             ->with('status', __('Post created successfully!'));
     }
 }

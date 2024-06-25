@@ -11,7 +11,7 @@
                 <div class="p-6 space-y-6">
                     <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-100">{{__('New Post Form')}}</h2>
                     
-                    <form action="{{ route('posts.store') }}" method="POST" class="space-y-4">
+                    <form action="{{ route('store') }}" method="POST" class="space-y-4">
                         @csrf
                         <div>
                             <label for="name_post" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{__('Name')}}:</label>
