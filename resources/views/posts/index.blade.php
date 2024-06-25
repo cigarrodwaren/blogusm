@@ -16,7 +16,7 @@
             @endforeach
             <div class="text-right">
             <x-nav-link :href="route('show', $post->id)" :active="request()->routeIs('posts')">
-                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{__('Show')}}</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{__('Show more')}}</span>
             </x-nav-link>    
             </div>
         </div>

@@ -8,7 +8,7 @@
         <div class="flex justify-between h-16">
             <div class="flex items-center">
                 <div class="flex-shrink-0">
-                   <a href="/" alt=""><span class="font-bold text-lg text-gray-800 dark:text-gray-200">Blog USM</span></a>
+                   <a href="/posts" alt=""><span class="font-bold text-lg text-gray-800 dark:text-gray-200">Blog USM</span></a>
                 </div>
                 <div class="flex-shrink-0">
                     <label>&nbsp;</label>
