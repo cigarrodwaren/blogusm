@@ -18,12 +18,14 @@
                 </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"> <!-- Ajustado ml-10 para margen a la izquierda -->
-                    <!-- <x-nav-link :href="route('posts')" :active="request()->routeIs('posts')">
-                       Posts
-                    </x-nav-link> -->
                     <x-nav-link :href="route('create')" :active="request()->routeIs('posts')">
                         {{ __('New Posts') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('list', Auth::user()->id)" :active="request()->routeIs('posts')">
+                        {{ __('Me Posts') }}
+                    </x-nav-link>
+                    
                 </div>
             </div>
 

@@ -52,4 +52,12 @@ class PostController extends Controller
         return to_route('posts')
             ->with('status', __('Post created successfully!'));
     }
+
+    public function list($id){
+        $matchThese = ['status' => 2, 'user_id' => $id];
+        $posts = Post::where($matchThese)
+            ->get();
+
+        return view('posts.index', compact('posts'));
+    }
 }
