@@ -8,15 +8,20 @@
         <div class="flex justify-between h-16">
             <div class="flex items-center">
                 <div class="flex-shrink-0">
-                    <span class="font-bold text-lg text-gray-800 dark:text-gray-200">Blog USM</span>
+                   <a href="/" alt=""><span class="font-bold text-lg text-gray-800 dark:text-gray-200">Blog USM</span></a>
                 </div>
-
+                <div class="flex-shrink-0">
+                    <label>&nbsp;</label>
+                    <label>&nbsp;</label>
+                    <label>&nbsp;</label>
+                    <label>&nbsp;</label>
+                </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"> <!-- Ajustado ml-10 para margen a la izquierda -->
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('posts')" :active="request()->routeIs('posts')">
+                    <!-- <x-nav-link :href="route('posts')" :active="request()->routeIs('posts')">
+                       Posts
+                    </x-nav-link> -->
+                    <x-nav-link :href="route('create')" :active="request()->routeIs('posts')">
                         {{ __('New Posts') }}
                     </x-nav-link>
                 </div>
