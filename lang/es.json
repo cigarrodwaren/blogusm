@@ -281,5 +281,10 @@
     "Enter category name...": "Ingresa el nombre para la nueva categoria...",
     "New Category": "Nueva Categoria",
     "Accounts": "Cuentas",
-    "New User": "Nuevo Usuario"
+    "New User": "Nuevo Usuario",
+    "New Post": "Nueva publicación",
+    "Create a New Tag": "Crear una Nueva Etiqueta",
+    "New Tag Form": "Formulario Nueva Etiqueta",
+    "Enter tag name...": "Ingrese el nombre nombre para la nueva etiqueta..."
+
 }

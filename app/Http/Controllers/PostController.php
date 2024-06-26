@@ -56,7 +56,7 @@ class PostController extends Controller
         }
        
         //session()->flash('status', 'Post created successfully!');
-        return to_route('posts')
+        return to_route('posts.index')
             ->with('status', __('Publicación creada con éxito!'));
     }
 
@@ -66,5 +66,16 @@ class PostController extends Controller
             ->get();
 
         return view('posts.index', compact('posts'));
+    }
+    public function destroy(Post $post){
+        Post::destroy($post->id);
+        $posts = Post::all();
+        return view("posts.index",compact("posts"));
+        if (auth()->id() !== $post->user_id) {
+            return redirect()->route('posts.index')->with('error', __('No tienes permiso para eliminar esta publicación.'));
+        }
+
+        $post->delete();
+        return redirect()->route('posts.index')->with('status', __('Publicación eliminada con éxito.'));
     }
 }

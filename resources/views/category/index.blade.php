@@ -11,7 +11,7 @@
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-100 dark:bg-gray-800">
                         <tr>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase">{{ __('#') }}</th>
+                            <!--<th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase">{{ __('#') }}</th>-->
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase">{{ __('Name') }}</th>
                             <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-600 uppercase">{{ __('Operations') }}</th>
                         </tr>
@@ -19,7 +19,7 @@
                     <tbody class="divide-y divide-gray-200">
                         @foreach ($categories as $category)
                         <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">{{ $category->id }}</td>
+                            <!--<td class="px-6 py-4 whitespace-nowrap">{{ $category->id }}</td>-->
                             <td class="px-6 py-4 whitespace-nowrap">{{ $category->name }}</td>
                             <td class="px-6 py-4 text-center whitespace-nowrap">
                                 <form action="{{ route('category.destroy', $category->id) }}" method="POST">

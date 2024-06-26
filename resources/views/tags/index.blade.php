@@ -11,7 +11,7 @@
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-100 dark:bg-gray-800">
                         <tr class="bg-gray-100 dark:bg-gray-800">
-                            <th class="px-4 py-2 text-left text-xs font-medium text-gray-600 uppercase">{{ __('#') }}</th>
+                            <!--<th class="px-4 py-2 text-left text-xs font-medium text-gray-600 uppercase">{{ __('#') }}</th>-->
                             <th class="px-4 py-2 text-left text-xs font-medium text-gray-600 uppercase">{{ __('Name') }}</th>
                             <th class="px-4 py-2 text-center text-xs font-medium text-gray-600 uppercase">{{ __('Operations') }}</th>
                         </tr>
@@ -19,7 +19,7 @@
                     <tbody class="divide-y divide-gray-200">
                         @foreach ($tags as $tag)
                         <tr>
-                            <td class="px-4 py-3">{{ $tag->id }}</td>
+                            <!--<td class="px-4 py-3">{{ $tag->id }}</td>-->
                             <td class="px-4 py-3">{{ $tag->name }}</td>
                             <td class="px-4 py-3 text-center">
                                 <form action="{{ route('tag.destroy', $tag->id) }}" method="POST">
