@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
@@ -13,6 +14,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return redirect('/');
     })->name('dashboard');
+
+    Route::get('account', [AccountController::class,'index'])->name('account.index');
+    Route::delete('account/{account}', [AccountController::class, 'destroy'])->name('account.destroy');
 
     Route::get('tags', [TagController::class, 'index'])->name('tags');
     Route::get('tags/create', [TagController::class, 'create'])->name('tag.create');
