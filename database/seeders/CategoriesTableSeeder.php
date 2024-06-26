@@ -50,6 +50,10 @@ class CategoriesTableSeeder extends Seeder
             "slug"=> Str::slug("Tecnico Universitario en Administracion de Empresas"),
         ]);
         Category::create([
+            "name"=> "Tecnico Universitario en Informatica",
+            "slug"=> Str::slug("Tecnico Universitario en Informatica"),
+        ]);
+        Category::create([
             "name"=> "Ingenieria en Prevencion de Riesgos",
             "slug"=> Str::slug("Ingenieria en Prevencion de Riesgos"),
         ]);

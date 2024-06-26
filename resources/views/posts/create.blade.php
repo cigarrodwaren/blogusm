@@ -15,9 +15,6 @@
                         <div>
                             <label for="name_post" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{__('Name')}}:</label>
                             <input type="text" name="name_post" id="name_post" value="{{old('name_post')}}" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="{{__('Enter title for the post...')}}">
-                            @error('name')
-                            <small style="color:red">{{ $message }}</small>
-                            @enderror
                         </div>
                         <div>
                             <label for="category_post" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{__('Category')}}:</label>
@@ -27,16 +24,10 @@
                                     <option value="{{$category->id}}">{{$category->name}}</option>
                                 @endforeach
                             </select>
-                            @error('category_id')
-                            <small style="color:red">{{ $message }}</small>
-                            @enderror
                         </div>
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{__('Message')}}:</label>
                             <textarea name="message" id="message" rows="4" value="{{old('name_tag')}}" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="{{ __("What's on your mind ...?") }}"></textarea>
-                            @error('body')
-                            <small style="color:red">{{ $message }}</small>
-                            @enderror
                         </div>
                         <div>
                             <fieldset>
