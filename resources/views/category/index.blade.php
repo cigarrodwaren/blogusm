@@ -35,7 +35,7 @@
             </div>
             <div class="text-center">
                 <x-nav-link :href="route('category.create')" :active="request()->routeIs('category')">
-                    <span class="inline-block bg-gray-200 rounded-full px-6 py-2 text-sm font-semibold text-gray-700 mr-2 mb-4">{{__('New Category')}}</span>
+                    <span class="inline-block bg-gray-200 rounded-full px-6 py-2 text-sm font-semibold text-gray-700 mr-2 mb-3">{{__('New Category')}}</span>
                 </x-nav-link>
             </div>
         </div>
