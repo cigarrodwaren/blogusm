@@ -273,5 +273,10 @@
     "Remove": "Eliminar",
     "New Tags": "Crear Etiqueta",
     "Create Tag": "Crear Tag",
-    "New Categories": "Nueva Categoria"
+    "New Categories": "Nueva categoria",
+    "New Tag": "Nueva etiqueta",
+    "New Category Form": "Formulario Nueva Categoria",
+    "Create a New Category": "Crear una Nueva Categoria",
+    "Create Category": "Crear Categoria",
+    "Enter category name...": "Ingresa el nombre para la nueva categoria..."
 }

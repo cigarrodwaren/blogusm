@@ -15,6 +15,9 @@
                         <div>
                             <label for="name_cat" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{__('Name')}}:</label>
                             <input type="text" name="name_cat" id="name_cat" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="{{__('Enter category name...')}}">
+                            @error('name')
+                            <small style="color:red">{{ $message }}</small>
+                            @enderror
                         </div>
                         <div class="flex justify-end">
                             <button type="submit" class="inline-flex items-center px-4 py-2 bg-indigo-600 border border-transparent rounded-md font-semibold text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
