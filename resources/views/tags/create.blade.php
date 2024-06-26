@@ -14,7 +14,7 @@
                         @csrf
                         <div>
                             <label for="name_tag" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{__('Name')}}:</label>
-                            <input type="text" name="name_tag" id="name_tag" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="{{__('Enter tag name...')}}">
+                            <input type="text" name="name_tag" id="name_tag" value="{{old('name_tag')}}" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="{{__('Enter tag name...')}}">
                             @error('name')
                             <small style="color:red">{{ $message }}</small>
                             @enderror

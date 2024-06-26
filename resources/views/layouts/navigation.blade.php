@@ -18,12 +18,12 @@
                 </div>
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex"> <!-- Ajustado ml-10 para margen a la izquierda -->
-                    <x-nav-link :href="route('create')" :active="request()->routeIs('posts')">
-                        {{ __('New Posts') }}
+                    <x-nav-link :href="route('posts.create')" :active="request()->routeIs('posts.create')">
+                        {{ __('New Post') }}
                     </x-nav-link>
-
-                    <x-nav-link :href="route('list', Auth::user()->id)" :active="request()->routeIs('posts')">
-                        {{ __('Me Posts') }}
+                    
+                    <x-nav-link :href="route('posts.listByUser', Auth::user()->id)" :active="request()->routeIs('posts.listByUser')">
+                        {{ __('My Posts') }}
                     </x-nav-link>
                     @if(Auth::user()->is_admin == 1)
                         <x-nav-link :href="route('tags')" :active="request()->routeIs('tags')">

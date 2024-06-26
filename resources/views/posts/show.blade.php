@@ -17,7 +17,7 @@
                         @endforeach
                     </div>
                     <div class="px-6 pt-4 pb-12 text-center">
-                        <x-nav-link :href="route('posts')" :active="request()->routeIs('posts')">
+                        <x-nav-link :href="route('posts.posts')" :active="request()->routeIs('posts')">
                             <span class="inline-block bg-gray-200 rounded-full px-6 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ __('Back') }}</span>
                         </x-nav-link>
                     </div>

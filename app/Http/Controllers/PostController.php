@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
@@ -35,12 +35,12 @@ class PostController extends Controller
 
     public function store(Request $request){
 
-        $request->validate([
-            'name'=> ['required'],
-            'body'=>['required'],
-            'category_id'=>['required'],
+        // $request->validate([
+        //     'name'=> ['required'],
+        //     'body'=>['required'],
+        //     'category_post'=>['required'],
+        // ]);
 
-        ]);
         $post = Post::create([
             'name' => request('name_post'),
             'body' => request('message'),
@@ -60,7 +60,7 @@ class PostController extends Controller
             ->with('status', __('Publicación creada con éxito!'));
     }
 
-    public function list($id){
+    public function listByUser($id){
         $matchThese = ['status' => 2, 'user_id' => $id];
         $posts = Post::where($matchThese)
             ->get();

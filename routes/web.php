@@ -24,15 +24,15 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('category/store', [CategoryController::class,'store'])->name('category.store');
     Route::delete('category/{category}', [CategoryController::class,'destroy'])->name('category.destroy');
 
-    Route::get('posts', [PostController::class,'index'])->name('posts');
-    Route::get('posts/{user}', [PostController::class,'list'])->name('list');
-    Route::get('posts/create', [PostController::class,'create'])->name('create');
-    Route::post('posts/store', [PostController::class,'store'])->name('store');
-    Route::get('posts/{post}', [PostController::class,'show'])->name('show');
+    Route::get('posts', [PostController::class, 'index'])->name('posts.index');
+    Route::get('posts/create', [PostController::class, 'create'])->name('posts.create');
+    Route::post('posts/store', [PostController::class, 'store'])->name('posts.store');
+    Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
+    Route::get('posts/user/{user}', [PostController::class, 'listByUser'])->name('posts.listByUser');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';        
+require __DIR__.'/auth.php';

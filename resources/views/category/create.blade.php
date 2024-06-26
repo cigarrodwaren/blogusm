@@ -14,7 +14,7 @@
                         @csrf
                         <div>
                             <label for="name_cat" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{__('Name')}}:</label>
-                            <input type="text" name="name_cat" id="name_cat" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="{{__('Enter category name...')}}">
+                            <input type="text" name="name_cat" id="name_cat" value="{{old('name_cat')}}" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="{{__('Enter category name...')}}">
                             @error('name')
                             <small style="color:red">{{ $message }}</small>
                             @enderror
