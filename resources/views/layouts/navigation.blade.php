@@ -30,7 +30,7 @@
                         {{ __('Tags') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('tags')" :active="request()->routeIs('tags')">
+                    <x-nav-link :href="route('category.index')" :active="request()->routeIs('category')">
                         {{ __('Categories') }}
                     </x-nav-link>
                 </div>

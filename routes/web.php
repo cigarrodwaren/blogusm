@@ -2,9 +2,9 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WelcomeController;
-use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WelcomeController::class,'index'])->name('welcome.index');
@@ -19,6 +19,11 @@ Route::middleware('auth')->group(function () {
     Route::get('tags/create', [TagController::class,'create'])->name('tag.create');
     Route::post('tags/store', [TagController::class,'store'])->name('tagstore');
     Route::delete('tags/{tag}', [TagController::class,'destroy'])->name('tag.destroy');
+
+    Route::get('category', [CategoryController::class,'index'])->name('category.index');
+    Route::get('category/create', [CategoryController::class,'create'])->name('category.create');
+    Route::post('category/store', [CategoryController::class,'store'])->name('category.store');
+    Route::delete('category/{category}', [CategoryController::class,'destroy'])->name('category.destroy');
 
     Route::get('posts', [PostController::class,'index'])->name('posts');
     Route::get('posts/{user}', [PostController::class,'list'])->name('list');
