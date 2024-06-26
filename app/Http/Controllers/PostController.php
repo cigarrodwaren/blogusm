@@ -50,7 +50,7 @@ class PostController extends Controller
        
         //session()->flash('status', 'Post created successfully!');
         return to_route('posts')
-            ->with('status', __('Post created successfully!'));
+            ->with('status', __('Publicación creada con éxito!'));
     }
 
     public function list($id){

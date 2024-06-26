@@ -36,4 +36,13 @@ class Post extends Model
     public function image(){
         return $this->morphOne(Image::class,'imageable');
     }
+
+
+
+    // Accesor para el extract
+    public function getExtractAttribute()
+    {
+        return substr($this->body, 0, 150) . (strlen($this->body) > 150 ? '...' : '');
+    }
+
 }
