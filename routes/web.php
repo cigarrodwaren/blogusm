@@ -7,18 +7,17 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [WelcomeController::class,'index'])->name('welcome.index');
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome.index');
 
-Route::get('/dashboard', function () {
-    return redirect('/');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard', function () {
+        return redirect('/');
+    })->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    
-    Route::get('tags', [TagController::class,'index'])->name('tags');
-    Route::get('tags/create', [TagController::class,'create'])->name('tag.create');
-    Route::post('tags/store', [TagController::class,'store'])->name('tagstore');
-    Route::delete('tags/{tag}', [TagController::class,'destroy'])->name('tag.destroy');
+    Route::get('tags', [TagController::class, 'index'])->name('tags');
+    Route::get('tags/create', [TagController::class, 'create'])->name('tag.create');
+    Route::post('tags/store', [TagController::class, 'store'])->name('tag.store');
+    Route::delete('tags/{tag}', [TagController::class, 'destroy'])->name('tag.destroy');
 
     Route::get('category', [CategoryController::class,'index'])->name('category.index');
     Route::get('category/create', [CategoryController::class,'create'])->name('category.create');
@@ -36,4 +35,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';        
