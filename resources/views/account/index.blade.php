@@ -11,7 +11,7 @@
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-100 dark:bg-gray-800">
                         <tr>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase">{{ __('#') }}</th>
+                            {{-- <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase">{{ __('#') }}</th> --}}
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase">{{ __('Name') }}</th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase">{{ __('Email') }}</th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-600 uppercase">{{ __('Created') }}</th>
@@ -22,7 +22,7 @@
                     <tbody class="divide-y divide-gray-200">
                         @foreach ($users as $user)
                         <tr>
-                            <td class="px-6 py-4 whitespace-nowrap">{{ $user->id }}</td>
+                            {{-- <td class="px-6 py-4 whitespace-nowrap">{{ $user->id }}</td> --}}
                             <td class="px-6 py-4 whitespace-nowrap">{{ $user->name }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ $user->email }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">{{ $user->created_at }}</td>
