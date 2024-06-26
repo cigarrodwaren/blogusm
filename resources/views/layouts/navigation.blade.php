@@ -25,14 +25,15 @@
                     <x-nav-link :href="route('list', Auth::user()->id)" :active="request()->routeIs('posts')">
                         {{ __('Me Posts') }}
                     </x-nav-link>
-                    
-                    <x-nav-link :href="route('tags')" :active="request()->routeIs('tags')">
-                        {{ __('Tags') }}
-                    </x-nav-link>
+                    @if(Auth::user()->is_admin == 1)
+                        <x-nav-link :href="route('tags')" :active="request()->routeIs('tags')">
+                            {{ __('Tags') }}
+                        </x-nav-link>
 
-                    <x-nav-link :href="route('category.index')" :active="request()->routeIs('category')">
-                        {{ __('Categories') }}
-                    </x-nav-link>
+                        <x-nav-link :href="route('category.index')" :active="request()->routeIs('category')">
+                            {{ __('Categories') }}
+                        </x-nav-link>
+                    @endif
                 </div>
             </div>
 
