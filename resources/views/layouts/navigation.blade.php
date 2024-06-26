@@ -26,6 +26,13 @@
                         {{ __('Me Posts') }}
                     </x-nav-link>
                     
+                    <x-nav-link :href="route('tags')" :active="request()->routeIs('tags')">
+                        {{ __('Tags') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('tags')" :active="request()->routeIs('tags')">
+                        {{ __('Categories') }}
+                    </x-nav-link>
                 </div>
             </div>
 
