@@ -16,7 +16,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard');
 
     Route::get('account', [AccountController::class,'index'])->name('account.index');
-    Route::delete('account/{account}', [AccountController::class, 'destroy'])->name('account.destroy');
+    Route::delete('account/{id}', [AccountController::class, 'destroy'])->name('account.destroy');
 
     Route::get('tags', [TagController::class, 'index'])->name('tags');
     Route::get('tags/create', [TagController::class, 'create'])->name('tag.create');

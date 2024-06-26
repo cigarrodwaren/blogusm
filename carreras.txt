@@ -13,58 +13,39 @@ Ingenieria en Biotecnologia
 Ingenieria en Diseño y Fabricacion Industrial
 Ingenieria en Mantenimiento Industrial
 
-<!-- <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Create') }} un nuevo post!
-        </h2>
-    </x-slot>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <div class="py-6">
-        <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 space-y-6">
-                    <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-100">{{__('New post form')}}</h2>
-                    
-                    <form action="{{ route('posts.store') }}" method="POST" class="space-y-4">
-                        @csrf
-                        <div>
-                            <label for="name_post" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{__('Name')}}:</label>
-                            <input type="text" name="name_post" id="name_post" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="{{__('Enter title for the post...')}}">
-                        </div>
-                        <div>
-                            <label for="category_post" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{__('Category')}}:</label>
-                            <select name="category_post" id="category_post" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                            <option selected="true" disabled="disabled">{{__('Select category')}}</option>
-                            @foreach ($categories as $category)
-                                <option value="{{$category->id}}">{{$category->name}}</option>
-                            @endforeach
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{__('Message')}}:</label>
-                            <textarea name="message" id="message" rows="4" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="{{ __("What's on your mind ...?") }}"></textarea>
-                        </div>
-                        <div style="color:white">
-                            <fieldset>
-                                <legend>{{__('Choose your tags')}}:</legend>
-                                @foreach ($tags as $tag)
-                                <div>
-                                    <input type="checkbox" id="{{$tag->id}}" name="tags[{{$tag->id}}]" />
-                                    <label for="{{$tag->name}}">{{$tag->name}}</label>
-                                </div>
-                                @endforeach
-                            </fieldset>
-                        </div>
-                        <div class="flex justify-end">
-                            <button type="submit" class="inline-flex items-center px-4 py-2 bg-indigo-600 border border-transparent rounded-md font-semibold text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                {{ __('Create Post') }}
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <title>{{ config('app.name', 'Blog USM') }}</title>
+        <!--<link rel="icon" type="/img/x-icon" href="{{ asset('img/favicon.ico') }}">-->
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
+        <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    </head>
+    <body class="font-sans antialiased">
+        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+            @include('layouts.navigation')
+
+            <!-- Page Heading -->
+            @isset($header)
+                <header class="bg-white dark:bg-gray-800 shadow">
+                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                        {{ $header }}
+                    </div>
+                </header>
+            @endisset
+
+            <!-- Page Content -->
+            <main>
+                {{ $slot }}
+            </main>
         </div>
-    </div>
-</x-app-layout> -->
-
+    </body>
+</html>
