@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('extract');
             $table->longText('body');
 
-            $table->enum('status',[1, 2])->default(1);
+            $table->enum('status',[2]);
 
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
