@@ -14,11 +14,12 @@
                         @csrf
                         <div>
                             <label for="name_post" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{__('Name')}}:</label>
-                            <input type="text" name="name_post" id="name_post" value="{{old('name_post')}}" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="{{__('Enter title for the post...')}}">
+                            <input type="text" name="name_post" id="name_post" value="{{old('name_post')}}" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required autocomplete="name_post" placeholder="{{__('Enter title for the post...')}}">
+                            
                         </div>
                         <div>
                             <label for="category_post" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{__('Category')}}:</label>
-                            <select name="category_post" id="category_post" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" value="{{ old('category_post')}}">
+                            <select name="category_post" id="category_post" value="{{old('category_post')}}"class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
                                 <option selected disabled>{{__('Select category')}}</option>
                                 @foreach ($categories as $category)
                                     <option value="{{$category->id}}">{{$category->name}}</option>
@@ -27,7 +28,7 @@
                         </div>
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">{{__('Message')}}:</label>
-                            <textarea name="message" id="message" rows="4" value="{{old('name_tag')}}" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="{{ __("What's on your mind ...?") }}"></textarea>
+                            <textarea name="message" id="message" rows="4" value="{{old('message')}}" class="mt-1 block w-full px-3 py-2 border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required autocomplete="message" placeholder="{{ __("What's on your mind ...?") }}"></textarea>
                         </div>
                         <div>
                             <fieldset>

@@ -13,13 +13,10 @@ class PostTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $posts = Post::factory()->count(100)->create();
+        $posts = Post::factory()->count(10)->create();
 
         foreach ($posts as $post) {
-            $post->tags()->attach([
-                rand(1,4),
-                rand(5,8)
-            ]);
+            $post->tags()->attach([1, 2, 3]);
         }
     }
 }

@@ -20,6 +20,12 @@ class UserSeeder extends Seeder
             'password' => bcrypt('12345678'),
             'is_admin' => 1,
         ]);
+        User::create([
+            "name"=> "Usuario",
+            "email"=> "user@acme.cl",
+            'password' => bcrypt('12345678'),
+            'is_admin' => 0,
+        ]);
         //User::factory(99)->create();
     }
 }

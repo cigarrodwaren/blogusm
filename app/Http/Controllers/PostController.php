@@ -35,12 +35,6 @@ class PostController extends Controller
 
     public function store(Request $request){
 
-        // $request->validate([
-        //     'name'=> ['required'],
-        //     'body'=>['required'],
-        //     'category_post'=>['required'],
-        // ]);
-
         $post = Post::create([
             'name' => request('name_post'),
             'body' => request('message'),
@@ -50,12 +44,13 @@ class PostController extends Controller
             'extract' => Str::slug(request('name_post')),
             'status' => 2,
         ]);
+        if ($request->tags != null){
         foreach ($request->tags as $key => $value) {
             $post->tags()->attach($key);
             $post->save();
+            }
         }
-       
-        //session()->flash('status', 'Post created successfully!');
+
         return to_route('posts.index')
             ->with('status', __('Publicación creada con éxito!'));
     }

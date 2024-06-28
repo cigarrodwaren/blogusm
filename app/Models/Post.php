@@ -37,8 +37,6 @@ class Post extends Model
         return $this->morphOne(Image::class,'imageable');
     }
 
-
-
     // Accesor para el extract
     public function getExtractAttribute()
     {
