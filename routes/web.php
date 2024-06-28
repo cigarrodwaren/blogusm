@@ -18,7 +18,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('account', [AccountController::class,'index'])->name('account.index');
     Route::delete('account/{id}', [AccountController::class, 'destroy'])->name('account.destroy');
 
-    Route::get('tags', [TagController::class, 'index'])->name('tags');
+    Route::get('tags', [TagController::class, 'index'])->name('tags.index');
     Route::get('tags/create', [TagController::class, 'create'])->name('tag.create');
     Route::post('tags/store', [TagController::class, 'store'])->name('tag.store');
     Route::delete('tags/{tag}', [TagController::class, 'destroy'])->name('tag.destroy');

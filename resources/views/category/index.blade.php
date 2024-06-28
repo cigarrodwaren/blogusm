@@ -1,8 +1,17 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Categories') }}
-        </h2>
+        <div class="flex justify-between items-center">
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                {{ __('Categories') }}
+            </h2>
+            <div>
+                <x-nav-link :href="route('category.create')" :active="request()->routeIs('category')">
+                    <div class="inline-block bg-gray-200 rounded-full px-6 py-2 text-sm font-semibold text-gray-700 shadow-md">
+                        {{__('New Category')}}
+                    </div>
+                </x-nav-link>
+            </div>
+        </div>
     </x-slot>
 
     <div class="container mx-auto py-8 mt-8">
@@ -32,11 +41,6 @@
                         @endforeach
                     </tbody>
                 </table>
-            </div>
-            <div class="text-center">
-                <x-nav-link :href="route('category.create')" :active="request()->routeIs('category')">
-                    <span class="inline-block bg-gray-200 rounded-full px-6 py-2 text-sm font-semibold text-gray-700 mr-2 mb-3">{{__('New Category')}}</span>
-                </x-nav-link>
             </div>
         </div>
     </div>

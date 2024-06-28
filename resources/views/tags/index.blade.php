@@ -1,9 +1,17 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Tags') }}
-        </h2>
+        <div class="flex justify-between items-center">
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                {{ __('Tags') }}
+            </h2>
+            <x-nav-link :href="route('tag.create')" :active="request()->routeIs('tag')">
+                <span class="inline-block bg-gray-200 rounded-full px-6 py-2 text-sm font-semibold text-gray-700 shadow-md">
+                    {{__('New Tag')}}
+                </span>
+            </x-nav-link>
+        </div>
     </x-slot>
+    
 
     <div class="container mx-auto py-8 mt-8 ">
         <div class="max-w-screen-lg mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
@@ -32,11 +40,6 @@
                         @endforeach
                     </tbody>
                 </table>
-            </div>
-            <div class="text-center">
-                <x-nav-link :href="route('tag.create')" :active="request()->routeIs('tag')">
-                    <span class="inline-block bg-gray-200 rounded-full px-6 py-2 text-sm font-semibold text-gray-700 mr-2 mb-3">{{__('New Tag')}}</span>
-                </x-nav-link>
             </div>
         </div>
     </div>

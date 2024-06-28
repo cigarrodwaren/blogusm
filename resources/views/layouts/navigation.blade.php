@@ -26,7 +26,7 @@
                         {{ __('My Posts') }}
                     </x-nav-link>
                     @if(Auth::user()->is_admin == 1)
-                        <x-nav-link :href="route('tags')" :active="request()->routeIs('tags')">
+                        <x-nav-link :href="route('tags.index')" :active="request()->routeIs('tags')">
                             {{ __('Tags') }}
                         </x-nav-link>
 
