@@ -16,7 +16,10 @@ class PostTableSeeder extends Seeder
         $posts = Post::factory()->count(10)->create();
 
         foreach ($posts as $post) {
-            $post->tags()->attach([1, 2, 3]);
+            $post->tags()->attach([
+                rand(1, 3),
+                rand(1, 3)
+            ]);
         }
     }
 }

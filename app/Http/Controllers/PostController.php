@@ -35,6 +35,11 @@ class PostController extends Controller
 
     public function store(Request $request){
 
+        $request->validate([
+            // Validate that only supported options will be accepted
+            'category_post' => 'required',
+        ]);
+
         $post = Post::create([
             'name' => request('name_post'),
             'body' => request('message'),
