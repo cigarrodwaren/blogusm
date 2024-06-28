@@ -285,7 +285,8 @@
     "New Post": "Nueva Publicación",
     "Create a New Tag": "Crear una Nueva Etiqueta",
     "New Tag Form": "Formulario Nueva Etiqueta",
-    "Enter tag name...": "Ingrese el nombre nombre para la nueva etiqueta...",
-    "Create Posts": "Crear Posts"
-
+    "Enter tag name...": "Ingrese el nombre para la nueva etiqueta...",
+    "Create Posts": "Crear Posts",
+    "No posts found": "No se encuentran publicaciones",
+    "There are no posts available at the moment.": "No hay publicaciones para mostrar"
 }

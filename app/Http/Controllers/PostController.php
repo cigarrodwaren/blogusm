@@ -18,12 +18,10 @@ class PostController extends Controller
         return view('posts.index', compact('posts'));
     }
 
-    public function show($id){
-        $matchThese = ['status' => 2, 'id' => $id];
-        $posts = Post::where($matchThese)
-            ->get();
-
-        return view('posts.show', compact('posts'));
+    public function show($id)
+    {
+        $post = Post::with('tags')->findOrFail($id);
+        return view('posts.show', compact('post'));
     }
 
     public function create(){
@@ -67,15 +65,16 @@ class PostController extends Controller
 
         return view('posts.index', compact('posts'));
     }
-    public function destroy(Post $post){
-        Post::destroy($post->id);
-        $posts = Post::all();
-        return view("posts.index",compact("posts"));
+    public function destroy($id)
+    {
+        $post = Post::findOrFail($id);
+
+        // Verifica que el usuario autenticado es el dueño del post
         if (auth()->id() !== $post->user_id) {
-            return redirect()->route('posts.index')->with('error', __('No tienes permiso para eliminar esta publicación.'));
+            return redirect()->route('posts.index')->with('error', 'No estás autorizado para eliminar este post.');
         }
 
         $post->delete();
-        return redirect()->route('posts.index')->with('status', __('Publicación eliminada con éxito.'));
+        return redirect()->route('posts.index')->with('success', 'Post eliminado correctamente.');
     }
 }
