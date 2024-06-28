@@ -4,7 +4,7 @@
             @foreach ($posts as $post)
                 <a href="{{ route('posts.show', $post->id) }}" class="block max-w-sm rounded overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
                     <div class="w-full">
-                        <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
+                        <img class="w-full" src="https://picsum.photos/800/600?random={{ 12965 + $post->id}}" alt="Sunset in the mountains">
                         <div class="px-6 py-4">
                             <div class="font-bold text-xl mb-2">{{ $post->name }}</div>
                             <p class="text-gray-700 text-base">

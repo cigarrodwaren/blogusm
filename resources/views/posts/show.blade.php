@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 gap-6">
             @foreach ($posts as $post)
                 <div class="max-w-full rounded overflow-hidden shadow-lg">
-                    <img class="w-full h-48 object-cover" src="{{ asset('img/card-top.jpg') }}" alt="Sunset in the mountains">
+                    <img class="w-full" src="https://picsum.photos/800/600?random={{ 12965 + $post->id}}" alt="Sunset in the mountains">
                     <div class="px-6 py-4">
                         <div class="font-bold text-2xl mb-2">{{ $post->name }}</div>
                         <div class="font-bold text-xl mb-2">{{ $post->extract }}</div>

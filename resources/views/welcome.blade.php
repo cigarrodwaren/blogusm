@@ -61,7 +61,7 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-6">
                             @foreach ($posts as $post) 
                                 <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                                    <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains">
+                                    <img class="w-full" src="https://picsum.photos/800/600?random={{ 12965 + $post->id}}" alt="Sunset in the mountains">
                                     <div class="px-6 py-4">
                                         <div class="font-bold text-xl mb-2">{{ $post->name }}</div>
                                         <p class="text-gray-700 text-base">
